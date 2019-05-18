@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Styled } from "./App.styles";
+import { LayeredCalendar } from "./layered-calendar/LayeredCalendar";
 
-export default App;
+const defaultProps = {
+  navigated: {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth()
+  }
+};
+
+const App = () => (
+  <Styled.Container>
+    <LayeredCalendar {...defaultProps} />
+  </Styled.Container>
+);
+
+export { App };

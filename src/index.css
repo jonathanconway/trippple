@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Spacing of top-level elements */
+
+html {
+  height: 100%;
+}
+
+html,
+body,
+#root {
+  display: flex;
+}
+
+body,
+#root {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  overflow: hidden;
+}
